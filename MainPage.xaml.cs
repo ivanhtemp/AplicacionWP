@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Animation;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -23,26 +24,54 @@ namespace AplicacionWP
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        private bool cambiado = false;
+
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private async void Button_Click_1(object sender, RoutedEventArgs e)
+
+
+        private async void cambiaImagen(object sender, RoutedEventArgs e)
         {
-            bool cambiado = false;
-            BitmapImage img;
-            if (cambiado == false)
+            if (cambiado == false && (cambiaUPM.GetCurrentState() != ClockState.Active && cambiaETSISI.GetCurrentState() != ClockState.Active))
             {
-                img = new BitmapImage(new Uri("ms-appx:///Assets/etsisi.png"));
-                logo.Source = img;
+                cambiaUPM.Begin();
                 cambiado = true;
-            } else
+            } else if (cambiado == true && (cambiaETSISI.GetCurrentState() != ClockState.Active && cambiaUPM.GetCurrentState() != ClockState.Active))
             {
-                img = new BitmapImage(new Uri("ms-appx:///Assets/upm.gif"));
-                logo.Source = img;
+                cambiaETSISI.Begin();
                 cambiado = false;
             }
+            
+            //Thickness posNuevaMarta, posNuevaAlex, posNuevaIvan;
+            //BitmapImage img;
+            //if (cambiado == false)
+            //{
+            //    img = new BitmapImage(new Uri("ms-appx:///Assets/etsisi.png"));
+            //    logo.Source = img;
+            //    posNuevaMarta = new Thickness(96, 425, 0, 0);
+            //    textMarta.Margin = posNuevaMarta;
+            //    posNuevaAlex = new Thickness(96, 286, 0, 0);
+            //    textAlejandro.Margin = posNuevaAlex;
+            //    posNuevaIvan = new Thickness(96, 356, 0, 0);
+            //    textIvan.Margin = posNuevaIvan;
+            //    cambiado = true;
+            //}
+            //else
+            //{
+            //    img = new BitmapImage(new Uri("ms-appx:///Assets/upm.gif"));
+            //    logo.Source = img;
+            //    posNuevaMarta = new Thickness(96, 356, 0, 0);
+            //    textMarta.Margin = posNuevaMarta;
+            //    posNuevaAlex = new Thickness(96, 425, 0, 0);
+            //    textAlejandro.Margin = posNuevaAlex;
+            //    posNuevaIvan = new Thickness(96, 286, 0, 0);
+            //    textIvan.Margin = posNuevaIvan;
+            //    cambiado = false;
+            //}
         }
     }
 }

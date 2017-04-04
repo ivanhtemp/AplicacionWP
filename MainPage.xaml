@@ -7,12 +7,47 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="#FF4698FF">
-        <Image x:Name="logo" Source="Assets/upm.gif" HorizontalAlignment="Left" Margin="108,54,0,0" VerticalAlignment="Top" Height="187" Width="157"/>
-        <TextBlock HorizontalAlignment="Left" Margin="96,286,0,0" TextWrapping="Wrap" Text="Rodriguez Lozano, Marta" VerticalAlignment="Top" Foreground="#FFFAFAFA" />
-        <TextBlock HorizontalAlignment="Left" Margin="96,356,0,0" TextWrapping="Wrap" Text="Puebla Holguín, Alejandro" VerticalAlignment="Top" Foreground="White" />
-        <TextBlock HorizontalAlignment="Left" Margin="96,425,0,0" TextWrapping="Wrap" Text="Hernández Temprano, Iván" VerticalAlignment="Top" Foreground="White" />
-        <Button Content="Cambia" HorizontalAlignment="Left" Margin="152,523,0,0" VerticalAlignment="Top" Background="White" Click="Button_Click_1"/>
+    <Canvas Background="#FF4698FF">
 
-    </Grid>
+        <Canvas.Resources>
+            <Storyboard x:Name="cambiaUPM">
+                <DoubleAnimation
+                          Storyboard.TargetName="upm"
+                          Storyboard.TargetProperty="Opacity"
+                          From="1.0" To="0.0" Duration="0:0:3"
+                          AutoReverse="False" />
+
+                <DoubleAnimation
+                          Storyboard.TargetName="etsisi"
+                          Storyboard.TargetProperty="Opacity"
+                          From="0.0" To="1.0" Duration="0:0:3"
+                          AutoReverse="False" />
+            </Storyboard>
+            <Storyboard x:Name="cambiaETSISI">
+                <DoubleAnimation
+                          Storyboard.TargetName="upm"
+                          Storyboard.TargetProperty="Opacity"
+                          From="0.0" To="1.0" Duration="0:0:3"
+                          AutoReverse="False" />
+
+                <DoubleAnimation
+                          Storyboard.TargetName="etsisi"
+                          Storyboard.TargetProperty="Opacity"
+                          From="1.0" To="0.0" Duration="0:0:3"
+                          AutoReverse="False" />
+            </Storyboard>
+        </Canvas.Resources>
+        
+            <Image x:Name="upm" Source="Assets/upm.gif" 
+                   Margin="0,0,0,0"  Height="187" Width="157" Canvas.ZIndex="0" Canvas.Left="96" Canvas.Top="57" />
+
+            <Image x:Name="etsisi" Source="Assets/etsisi.png"
+                   Margin="0,0,0,0"  Height="187" Width="157" Canvas.ZIndex="1" Canvas.Left="104" Canvas.Top="57" Opacity="0.0"/>
+
+            <TextBlock x:Name="textMarta" HorizontalAlignment="Left" Margin="96,286,0,0" TextWrapping="Wrap" Text="Rodriguez Lozano, Marta" VerticalAlignment="Top" Foreground="#FFFAFAFA" />
+            <TextBlock x:Name="textAlejandro" HorizontalAlignment="Left" Margin="96,356,0,0" TextWrapping="Wrap" Text="Puebla Holguín, Alejandro" VerticalAlignment="Top" Foreground="White" />
+            <TextBlock x:Name="textIvan" HorizontalAlignment="Left" Margin="96,425,0,0" TextWrapping="Wrap" Text="Hernández Temprano, Iván" VerticalAlignment="Top" Foreground="White" />
+            <Button Content="Cambia" HorizontalAlignment="Left" Margin="152,523,0,0" VerticalAlignment="Top" Background="White" Click="cambiaImagen"/>
+        
+    </Canvas>
 </Page>

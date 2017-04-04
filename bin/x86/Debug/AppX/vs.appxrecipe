@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Ivan\documents\visual studio 2017\Projects\AplicacionWP\AplicacionWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-01T11:09:35.398</Modified>
+      <Modified>2017-04-04T23:06:58.449</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ivan\documents\visual studio 2017\Projects\AplicacionWP\AplicacionWP\bin\x86\Debug\AplicacionWP.exe">
       <PackagePath>entrypoint\AplicacionWP.exe</PackagePath>
-      <Modified>2017-04-01T11:09:34.644</Modified>
+      <Modified>2017-04-04T23:06:58.217</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivan\.nuget\packages\Microsoft.CSharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -540,7 +540,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivan\documents\visual studio 2017\Projects\AplicacionWP\AplicacionWP\bin\x86\Debug\AplicacionWP.xr.xml">
       <PackagePath>AplicacionWP.xr.xml</PackagePath>
-      <Modified>2017-04-01T10:18:26.625</Modified>
+      <Modified>2017-04-04T22:24:59.048</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -549,11 +549,11 @@
     <AppxPackagedFile Include="C:\Users\Ivan\documents\visual studio 2017\Projects\AplicacionWP\AplicacionWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-01T10:18:27.124</Modified>
+      <Modified>2017-04-04T23:00:01.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ivan\documents\visual studio 2017\Projects\AplicacionWP\AplicacionWP\bin\x86\Debug\Core\AplicacionWP.exe">
       <PackagePath>AplicacionWP.exe</PackagePath>
-      <Modified>2017-04-01T11:09:35.389</Modified>
+      <Modified>2017-04-04T23:06:58.446</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
